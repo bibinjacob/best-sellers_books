@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/base_navigation"
+    app:startDestination="@id/fragmentSplash">
+
+    <fragment
+        android:id="@+id/fragmentSplash"
+        android:name="com.bibin.books.splash.presentation.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splash_to_book_category_fragment"
+            app:destination="@+id/fragmentBookCat" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentBookCat"
+        android:name="com.bibin.books.bookmanagement.presentation.BookCategoryFragment"
+        android:label="fragment_book_category"
+        tools:layout="@layout/fragment_book_category">
+        <action
+            android:id="@+id/action_fragmentBookCat_to_fragmentBookList"
+            app:destination="@+id/fragmentBookList" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentBookList"
+        android:name="com.bibin.books.bookmanagement.presentation.BookListFragment"
+        android:label="fragment_book_list"
+        tools:layout="@layout/fragment_book_list">
+
+    </fragment>
+</navigation>
